@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+=begin 
+Gera dados para teste [BD] + run "rails db:seed"
+Hero.delete_all 
+5.times do |i|
+    Hero.create name: "Hero #{i}"
+end
+=end
+
+#! Usando gem Faker 
+Hero.delete_all 
+5.times do 
+    Hero.create name: Faker::Superhero.name
+end
+
+
